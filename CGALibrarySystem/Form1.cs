@@ -130,5 +130,12 @@ namespace CGALibrarySystem
                 }
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            AdminLogin AdminForm = new AdminLogin();
+            AdminForm.Show();
+        }
     }
 }

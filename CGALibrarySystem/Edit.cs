@@ -116,7 +116,6 @@ namespace CGALibrarySystem
 
             MySqlConnection con = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, con);
-            MySqlDataReader dr;
 
             MySqlCommand cmd2 = new MySqlCommand(query2, con);
             MySqlDataAdapter da = new MySqlDataAdapter();
