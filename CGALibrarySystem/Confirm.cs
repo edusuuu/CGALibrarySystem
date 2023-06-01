@@ -53,7 +53,7 @@ namespace CGALibrarySystem
                     MessageBox.Show("Username does not exist!");
 
                 }
-                else if (!CheckIfPasswordExists(password))
+                else if (!CheckIfPasswordExists(username, password))
                 {
                     MessageBox.Show("Password does not exist!");
                 }
@@ -106,21 +106,30 @@ namespace CGALibrarySystem
                 }
             }
         }
-        private bool CheckIfPasswordExists(string Password)
+        private bool CheckIfPasswordExists(string username, string password)
         {
             string connectionString = "server=localhost;user id=root;password=;database=cgalibrarysystem";
-            string query = "SELECT COUNT(*) FROM Students WHERE Password = @Password";
+            string query = "SELECT COUNT(*) FROM Students WHERE Username = @Username AND Password = @Password";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("@Password", Password);
+                    try
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Password", password);
 
-                    connection.Open();
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        connection.Open();
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
 
-                    return count > 0;
+                        return count > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("An error occurred: " + ex.Message);
+                        return false;
+                    }
                 }
             }
         }
