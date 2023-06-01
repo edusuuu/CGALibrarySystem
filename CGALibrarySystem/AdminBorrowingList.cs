@@ -38,7 +38,10 @@ namespace CGALibrarySystem
         {
             if (dgBorrowingList.SelectedRows.Count > 0)
             {
+<<<<<<< HEAD
                 viewBorrowingID.Text = dgBorrowingList.SelectedRows[0].Cells[0].Value.ToString();
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
                 txtBorrowingID.Text = dgBorrowingList.SelectedRows[0].Cells[0].Value.ToString();
                 txtStudentID.Text = dgBorrowingList.SelectedRows[0].Cells[1].Value.ToString();
                 txtBookID.Text = dgBorrowingList.SelectedRows[0].Cells[2].Value.ToString();
@@ -51,7 +54,11 @@ namespace CGALibrarySystem
         private void updateBtn_Click(object sender, EventArgs e)
         {
             string connection = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+<<<<<<< HEAD
             string query = "UPDATE `borrowings` SET `BorrowingID`='" + this.txtBorrowingID.Text + "',`StudentID`='" + this.txtStudentID.Text + "',`BookID`='" + this.txtBookID.Text + "',`BorrowDate`='" + this.txtBorrowDate.Text + "',`ReturnDate`='" + this.txtReturnDate.Text + "',`Fine`='" + this.viewFine.Text + "' WHERE BorrowingID = '" + this.viewBorrowingID.Text + "'";
+=======
+            string query = "UPDATE `borrowings` SET `StudentID`='" + this.txtBorrowingID.Text + "',`Name`='" + this.txtStudentID.Text + "',`Email`='" + this.txtBookID.Text + "',`Username`='" + this.txtBorrowDate.Text + "',`Password`='" + this.txtReturnDate.Text + "',`Course`='" + this.viewFine.Text + "' WHERE BorrowingID = '" + this.txtBorrowingID.Text + "'";
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             string query2 = "SELECT * FROM `borrowings` WHERE 1";
 
             MySqlConnection con = new MySqlConnection(connection);
@@ -98,7 +105,10 @@ namespace CGALibrarySystem
                     da.Fill(dt);
                     dgBorrowingList.DataSource = dt;
 
+<<<<<<< HEAD
                     viewBorrowingID.Text = "";
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
                     txtBorrowingID.Text = "";
                     txtStudentID.Text = "";
                     txtBookID.Text = "";
@@ -117,7 +127,11 @@ namespace CGALibrarySystem
         private void returnedBtn_Click(object sender, EventArgs e)
         {
             string connection = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+<<<<<<< HEAD
             string query = "UPDATE `borrowings` SET `Status`='Returned' WHERE BorrowingID = '" + this.viewBorrowingID.Text + "'";
+=======
+            string query = "UPDATE `borrowings` SET `Status`='Returned' WHERE BorrowingID = '" + this.txtBorrowingID.Text + "'";
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
 
             MySqlConnection con = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, con);
@@ -125,14 +139,22 @@ namespace CGALibrarySystem
 
             con.Open();
             dr = cmd.ExecuteReader();
+<<<<<<< HEAD
             MessageBox.Show("This book is returned!");
+=======
+            MessageBox.Show("This Account is now inactive!");
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             con.Close();
         }
 
         private void notReturnedBtn_Click(object sender, EventArgs e)
         {
             string connection = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+<<<<<<< HEAD
             string query = "UPDATE `borrowings` SET `Status`='Not Returned' WHERE BorrowingID = '" + this.viewBorrowingID.Text + "'";
+=======
+            string query = "UPDATE `borrowings` SET `Status`='Not Returned' WHERE BorrowingID = '" + this.txtBorrowingID.Text + "'";
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
 
             MySqlConnection con = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, con);
@@ -140,7 +162,11 @@ namespace CGALibrarySystem
 
             con.Open();
             dr = cmd.ExecuteReader();
+<<<<<<< HEAD
             MessageBox.Show("This book is not yet returned!");
+=======
+            MessageBox.Show("This Account is now inactive!");
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             con.Close();
         }
 
@@ -151,7 +177,10 @@ namespace CGALibrarySystem
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             viewBorrowingID.Text = "";
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             txtBorrowingID.Text = "";
             txtStudentID.Text = "";
             txtBookID.Text = "";
@@ -171,10 +200,13 @@ namespace CGALibrarySystem
             setFine = "None";
             viewFine.Text = setFine;
         }
+<<<<<<< HEAD
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
     }
 }

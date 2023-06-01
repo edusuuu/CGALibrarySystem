@@ -37,7 +37,10 @@ namespace CGALibrarySystem
         {
             if (dgBookList.SelectedRows.Count > 0)
             {
+<<<<<<< HEAD
                 viewBookID.Text = dgBookList.SelectedRows[0].Cells[0].Value.ToString();
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
                 txtBookID.Text = dgBookList.SelectedRows[0].Cells[0].Value.ToString();
                 txtTitle.Text = dgBookList.SelectedRows[0].Cells[1].Value.ToString();
             }
@@ -52,7 +55,11 @@ namespace CGALibrarySystem
             else
             {
                 string connection = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+<<<<<<< HEAD
                 string query = "UPDATE `books` SET `Available`='Yes' WHERE BookID = '" + this.viewBookID.Text + "'";
+=======
+                string query = "UPDATE `books` SET `Available`='Yes' WHERE BookID = '" + this.txtBookID.Text + "'";
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
 
                 MySqlConnection con = new MySqlConnection(connection);
                 MySqlCommand cmd = new MySqlCommand(query, con);
@@ -84,7 +91,11 @@ namespace CGALibrarySystem
             else
             {
                 string connection = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+<<<<<<< HEAD
                 string query = "UPDATE `books` SET `Available`='No' WHERE BookID = '" + this.viewBookID.Text + "'";
+=======
+                string query = "UPDATE `books` SET `Available`='No' WHERE BookID = '" + this.txtBookID.Text + "'";
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
 
                 MySqlConnection con = new MySqlConnection(connection);
                 MySqlCommand cmd = new MySqlCommand(query, con);
@@ -110,7 +121,11 @@ namespace CGALibrarySystem
         private void updateBtn_Click(object sender, EventArgs e)
         {
             string connection = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+<<<<<<< HEAD
             string query = "UPDATE `books` SET `BookID`='" + this.txtBookID.Text + "',`Title`='" + this.txtTitle.Text + "' WHERE BookID = '" + this.viewBookID.Text + "'";
+=======
+            string query = "UPDATE `books` SET `BookID`='" + this.txtBookID.Text + "',`Title`='" + this.txtTitle.Text + "' WHERE BookID = '" + this.txtBookID.Text + "'";
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             string query2 = "SELECT * FROM `students` WHERE 1";
 
             MySqlConnection con = new MySqlConnection(connection);
@@ -141,7 +156,11 @@ namespace CGALibrarySystem
                     da.Fill(dt);
                     dgBookList.DataSource = dt;
 
+<<<<<<< HEAD
                     viewBookID.Text = "";
+=======
+                    txtBookID.Text = "";
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
                     txtTitle.Text = "";
                     
 
@@ -160,6 +179,7 @@ namespace CGALibrarySystem
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             viewBookID.Text = "";
             txtBookID.Text = "";
             txtTitle.Text = "";
@@ -169,5 +189,10 @@ namespace CGALibrarySystem
         {
 
         }
+=======
+            txtBookID.Text = "";
+            txtTitle.Text = "";
+        }
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
     }
 }

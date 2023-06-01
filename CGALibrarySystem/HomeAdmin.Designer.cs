@@ -98,7 +98,10 @@
             this.borrowingListBtn.TabIndex = 36;
             this.borrowingListBtn.Text = "Borrowing List";
             this.borrowingListBtn.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.borrowingListBtn.Click += new System.EventHandler(this.borrowingListBtn_Click);
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             // 
             // groupBox1
             // 

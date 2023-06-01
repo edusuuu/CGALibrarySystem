@@ -37,12 +37,19 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtBookID = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.clearBtn = new System.Windows.Forms.Button();
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             this.updateBtn = new System.Windows.Forms.Button();
             this.btnBackSlist = new System.Windows.Forms.Button();
             this.dgBookList = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.viewBookID = new System.Windows.Forms.Label();
+=======
+            this.clearBtn = new System.Windows.Forms.Button();
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -51,7 +58,10 @@
             // 
             // groupBox2
             // 
+<<<<<<< HEAD
             this.groupBox2.Controls.Add(this.viewBookID);
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtTitle);
@@ -65,7 +75,10 @@
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edit Information";
+<<<<<<< HEAD
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             // 
             // groupBox3
             // 
@@ -155,6 +168,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modify";
             // 
+<<<<<<< HEAD
             // clearBtn
             // 
             this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,6 +181,8 @@
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             // updateBtn
             // 
             this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,6 +230,7 @@
             this.label2.Text = "Book List:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+<<<<<<< HEAD
             // viewBookID
             // 
             this.viewBookID.AutoSize = true;
@@ -222,6 +239,19 @@
             this.viewBookID.Name = "viewBookID";
             this.viewBookID.Size = new System.Drawing.Size(0, 22);
             this.viewBookID.TabIndex = 44;
+=======
+            // clearBtn
+            // 
+            this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearBtn.Location = new System.Drawing.Point(87, 46);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(198, 45);
+            this.clearBtn.TabIndex = 2;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             // 
             // AdminBookList
             // 
@@ -261,6 +291,9 @@
         private System.Windows.Forms.Button yesBtn;
         private System.Windows.Forms.Button noBtn;
         private System.Windows.Forms.Button clearBtn;
+<<<<<<< HEAD
         private System.Windows.Forms.Label viewBookID;
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
     }
 }

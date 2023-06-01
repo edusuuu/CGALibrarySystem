@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.setAdminAccRbtn = new System.Windows.Forms.RadioButton();
             this.setSuperAccRbtn = new System.Windows.Forms.RadioButton();
             this.viewFine = new System.Windows.Forms.Label();
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.returnedBtn = new System.Windows.Forms.Button();
             this.notReturnedBtn = new System.Windows.Forms.Button();
@@ -52,17 +55,32 @@
             this.dgBorrowingList = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBackSlist = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.viewBorrowingID = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBorrowingList)).BeginInit();
+=======
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.setAdminAccRbtn = new System.Windows.Forms.RadioButton();
+            this.setSuperAccRbtn = new System.Windows.Forms.RadioButton();
+            this.viewFine = new System.Windows.Forms.Label();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBorrowingList)).BeginInit();
+            this.groupBox4.SuspendLayout();
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+<<<<<<< HEAD
             this.groupBox2.Controls.Add(this.viewBorrowingID);
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.label8);
@@ -83,6 +101,7 @@
             this.groupBox2.TabIndex = 47;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edit Information";
+<<<<<<< HEAD
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // groupBox4
@@ -131,6 +150,8 @@
             this.viewFine.Name = "viewFine";
             this.viewFine.Size = new System.Drawing.Size(0, 22);
             this.viewFine.TabIndex = 41;
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             // 
             // groupBox3
             // 
@@ -336,6 +357,7 @@
             this.btnBackSlist.UseVisualStyleBackColor = true;
             this.btnBackSlist.Click += new System.EventHandler(this.btnBackSlist_Click);
             // 
+<<<<<<< HEAD
             // viewBorrowingID
             // 
             this.viewBorrowingID.AutoSize = true;
@@ -344,6 +366,54 @@
             this.viewBorrowingID.Name = "viewBorrowingID";
             this.viewBorrowingID.Size = new System.Drawing.Size(0, 22);
             this.viewBorrowingID.TabIndex = 44;
+=======
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.setAdminAccRbtn);
+            this.groupBox4.Controls.Add(this.setSuperAccRbtn);
+            this.groupBox4.Controls.Add(this.viewFine);
+            this.groupBox4.Location = new System.Drawing.Point(435, 112);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(380, 87);
+            this.groupBox4.TabIndex = 43;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Fine";
+            // 
+            // setAdminAccRbtn
+            // 
+            this.setAdminAccRbtn.AutoSize = true;
+            this.setAdminAccRbtn.Location = new System.Drawing.Point(222, 54);
+            this.setAdminAccRbtn.Name = "setAdminAccRbtn";
+            this.setAdminAccRbtn.Size = new System.Drawing.Size(73, 24);
+            this.setAdminAccRbtn.TabIndex = 43;
+            this.setAdminAccRbtn.TabStop = true;
+            this.setAdminAccRbtn.Text = "None";
+            this.setAdminAccRbtn.UseVisualStyleBackColor = true;
+            this.setAdminAccRbtn.CheckedChanged += new System.EventHandler(this.setAdminAccRbtn_CheckedChanged);
+            // 
+            // setSuperAccRbtn
+            // 
+            this.setSuperAccRbtn.AutoSize = true;
+            this.setSuperAccRbtn.Location = new System.Drawing.Point(78, 54);
+            this.setSuperAccRbtn.Name = "setSuperAccRbtn";
+            this.setSuperAccRbtn.Size = new System.Drawing.Size(72, 24);
+            this.setSuperAccRbtn.TabIndex = 42;
+            this.setSuperAccRbtn.TabStop = true;
+            this.setSuperAccRbtn.Text = "P100";
+            this.setSuperAccRbtn.UseVisualStyleBackColor = true;
+            this.setSuperAccRbtn.CheckedChanged += new System.EventHandler(this.setSuperAccRbtn_CheckedChanged);
+            // 
+            // viewFine
+            // 
+            this.viewFine.AutoSize = true;
+            this.viewFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewFine.Location = new System.Drawing.Point(150, 24);
+            this.viewFine.Name = "viewFine";
+            this.viewFine.Size = new System.Drawing.Size(0, 22);
+            this.viewFine.TabIndex = 41;
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             // 
             // AdminBorrowingList
             // 
@@ -359,11 +429,19 @@
             this.Load += new System.EventHandler(this.AdminBorrowingList_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+<<<<<<< HEAD
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgBorrowingList)).EndInit();
+=======
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgBorrowingList)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,6 +473,9 @@
         private System.Windows.Forms.RadioButton setAdminAccRbtn;
         private System.Windows.Forms.RadioButton setSuperAccRbtn;
         private System.Windows.Forms.Label viewFine;
+<<<<<<< HEAD
         private System.Windows.Forms.Label viewBorrowingID;
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
     }
 }

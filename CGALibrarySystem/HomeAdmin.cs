@@ -60,12 +60,15 @@ namespace CGALibrarySystem
             SuperAccountLogIn superLogIn = new SuperAccountLogIn();
             superLogIn.modifyAcc = "create";
             superLogIn.Show();
+<<<<<<< HEAD
         }
 
         private void borrowingListBtn_Click(object sender, EventArgs e)
         {
             AdminBorrowingList borrowingList = new AdminBorrowingList();
             borrowingList.Show();
+=======
+>>>>>>> fd599d6ed8a98db4de992d2442b6fbc43359eeef
         }
     }
 }
