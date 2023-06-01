@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CGALibrarySystem
 {
-    public partial class HomeAdmin : Form
+    public partial class AdminHome : Form
     {
-        public HomeAdmin()
+        public AdminHome()
         {
             InitializeComponent();
         }
@@ -24,7 +24,48 @@ namespace CGALibrarySystem
 
         private void btnSetInactiveSlist_Click(object sender, EventArgs e)
         {
+            AdminStudentList studentList = new AdminStudentList();
+            studentList.Show();
+        }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bookListBtn_Click(object sender, EventArgs e)
+        {
+            AdminBookList bookList = new AdminBookList();
+            bookList.Show();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SuperAccountLogIn superLogIn = new SuperAccountLogIn();
+            superLogIn.modifyAcc = "edit";
+            superLogIn.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SuperAccountLogIn superLogIn = new SuperAccountLogIn();
+            superLogIn.modifyAcc = "create";
+            superLogIn.Show();
+        }
+
+        private void borrowingListBtn_Click(object sender, EventArgs e)
+        {
+            AdminBorrowingList borrowingList = new AdminBorrowingList();
+            borrowingList.Show();
         }
     }
 }

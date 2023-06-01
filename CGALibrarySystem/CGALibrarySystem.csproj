@@ -59,6 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBookList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminBookList.Designer.cs">
+      <DependentUpon>AdminBookList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBorrowingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminBorrowingList.Designer.cs">
+      <DependentUpon>AdminBorrowingList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Borrow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +107,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminStudentList.cs">
+    <Compile Include="AdminStudentList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adminStudentList.Designer.cs">
-      <DependentUpon>adminStudentList.cs</DependentUpon>
+    <Compile Include="AdminStudentList.Designer.cs">
+      <DependentUpon>AdminStudentList.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminLogin.cs">
       <SubType>Form</SubType>
@@ -133,6 +145,30 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuperAccountLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuperAccountLogIn.Designer.cs">
+      <DependentUpon>SuperAccountLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuperCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuperCreate.Designer.cs">
+      <DependentUpon>SuperCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuperModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuperModify.Designer.cs">
+      <DependentUpon>SuperModify.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminBookList.resx">
+      <DependentUpon>AdminBookList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminBorrowingList.resx">
+      <DependentUpon>AdminBorrowingList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Borrow.resx">
       <DependentUpon>Borrow.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,8 +187,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adminStudentList.resx">
-      <DependentUpon>adminStudentList.cs</DependentUpon>
+    <EmbeddedResource Include="AdminStudentList.resx">
+      <DependentUpon>AdminStudentList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
@@ -177,6 +213,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperAccountLogIn.resx">
+      <DependentUpon>SuperAccountLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperCreate.resx">
+      <DependentUpon>SuperCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperModify.resx">
+      <DependentUpon>SuperModify.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

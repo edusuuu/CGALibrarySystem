@@ -20,51 +20,117 @@ namespace CGALibrarySystem
 
         private void logInBtn_Click(object sender, EventArgs e)
         {
-            string Username = txtUsername.Text;
-            string Password = txtPassword.Text;
+            string adminUser = txtUsername.Text;
+            string adminPass = txtPassword.Text;
 
-            if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
+            if (string.IsNullOrWhiteSpace(adminUser) || string.IsNullOrWhiteSpace(adminPass))
             {
                 MessageBox.Show("Invalid username or password!");
                 return;
             }
             else
             {
-                string mysqlConfig = "server=localhost;user id=root;password=;database=cgalibrarysystem";
-                string query = "SELECT * FROM `admin` WHERE username = '" + Username + "'";
-
-                MySqlConnection connection = new MySqlConnection(mysqlConfig);
-                MySqlCommand command = new MySqlCommand(query, connection);
-                try
+                if (!CheckIfAdminUserExists(adminUser))
                 {
-                    connection.Open();
-                    using (MySqlDataReader reader = command.ExecuteReader())
+                    MessageBox.Show("Username does not exist!");
+
+                }
+                else if (!CheckIfAdminPassExists(adminUser, adminPass))
+                {
+                    MessageBox.Show("Password invalid!");
+                }
+                else
+                {
+                    string connection = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+                    string query = "SELECT `AdminID`, `Name`, `Email`, `Username`, `Password`, `AccountType`, `Status` FROM `admins` WHERE Username = '" + txtUsername.Text + "' AND Password = '" + txtPassword.Text + "'";
+
+                    MySqlConnection con = new MySqlConnection(connection);
+                    MySqlDataReader dr;
+
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    con.Open();
+                    using (dr = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (dr.Read())
                         {
-                            string admin_username = reader["username"].ToString() ?? "edzel_onlyfans";
-                            string admin_password = reader["password"].ToString() ?? "hotdog";
-                            Console.WriteLine(admin_username);
-                            bool invalidUsername = string.Equals(Username, admin_username) == false;
-                            bool invalidPassword = string.Equals(Password, admin_password) == false;
-                            if (invalidUsername) throw new Exception("Invalid Username");
-                            if (invalidPassword) throw new Exception("Invalid Password");
-                            HomeAdmin homeAdmin = new HomeAdmin();
-                            this.Hide();
-                            homeAdmin.Show();
+                            string status = dr["Status"].ToString();
+                            if (status == "1")
+                            {
+                                this.Hide();
+                                AdminHome hoAd = new AdminHome();
+                                hoAd.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Account is Inactive!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Something went wrong!");
                         }
                     }
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-                finally { connection.Close(); }
+                    con.Close();
 
+                }
             }
+
 
         }
 
+        private bool CheckIfAdminUserExists(string adminUser)
+        {
+            string connectionString = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+            string query = "SELECT COUNT(*) FROM Admins WHERE Username = @Username";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Username", adminUser);
+
+                    connection.Open();
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    return count > 0;
+                }
+            }
+        }
+
+        private bool CheckIfAdminPassExists(string adminUser, string adminPass)
+        {
+            string connectionString = "server=localhost;user id=root;password=;database=cgalibrarysystem";
+            string query = "SELECT COUNT(*) FROM Admins WHERE Username = @Username AND Password = @Password";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    try
+                    {
+                        cmd.Parameters.AddWithValue("@Username", adminUser);
+                        cmd.Parameters.AddWithValue("@Password", adminPass);
+
+                        connection.Open();
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        return count > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("An error occurred: " + ex.Message);
+                        return false;
+                    }
+                }
+            }
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.Show();
+        }
     }
 
 }

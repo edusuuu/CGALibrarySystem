@@ -282,7 +282,7 @@
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "SignUp";
-            this.Text = "Library System";
+            this.Text = "Library System - Sign Up";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgStudentInfo)).EndInit();
