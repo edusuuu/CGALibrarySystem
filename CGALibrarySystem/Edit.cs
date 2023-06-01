@@ -110,7 +110,7 @@ namespace CGALibrarySystem
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            string connection = "server=localhost;user id=root;password=;database=librarysystemdb";
+            string connection = "server=localhost;user id=root;password=;database=cgalibrarysystem";
             string query = "UPDATE `students` SET `Name`='" + this.txtFullname.Text + "',`Email`='" + this.txtEmail.Text + "',`Username`='" + this.txtUsername.Text + "',`Password`='" + this.txtPassword.Text + "',`Course`='" + this.txtCourse.Text + "',`Section`='" + this.txtSection.Text + "' WHERE StudentID = '" + this.txtSearchID.Text + "'";
             string query2 = "SELECT * FROM `students` WHERE StudentID = '" + this.txtSearchID.Text + "'";
 
